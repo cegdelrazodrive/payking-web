@@ -46,3 +46,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
