@@ -6,31 +6,30 @@
 
   <!-- Primary SEO -->
   <title>Cobro con tarjeta para estacionamientos | Integración de terminales | Payking</title>
-
   <meta name="description" content="Habilita el cobro con tarjeta en tu estacionamiento. Integramos terminales desatendidas con Meypar, DESIGNA y Skidata. Centraliza transacciones y conciliación en una sola plataforma.">
-
-  <meta name="keywords" content="pagos con tarjeta estacionamientos, terminal bancaria estacionamiento, integrar terminal meypar, integrar designa tarjeta, cobro con tarjeta estacionamiento, sistema de pago estacionamientos">
-
   <meta name="author" content="Payking">
   <meta name="robots" content="index, follow">
 
-  <!-- Canonical -->
+  <!-- Canonical (cámbialo si estás en GitHub Pages) -->
   <link rel="canonical" href="https://payking.mx/">
 
   <!-- Favicons -->
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-  <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://payking.mx/">
   <meta property="og:title" content="Cobro con tarjeta para estacionamientos | Payking">
   <meta property="og:description" content="Integra terminales desatendidas con tu sistema actual y centraliza pagos con tarjeta en una sola plataforma.">
+  <!-- cuando tengas OG -->
+  <!-- <meta property="og:image" content="https://payking.mx/assets/img/og-cover.png"> -->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cobro con tarjeta para estacionamientos | Payking">
   <meta name="twitter:description" content="Integra terminales de pago con tu sistema de estacionamiento sin desarrollo adicional.">
+  <!-- <meta name="twitter:image" content="https://payking.mx/assets/img/og-cover.png"> -->
 
   <!-- Theme color -->
   <meta name="theme-color" content="#47648f">
@@ -46,10 +45,10 @@
   <link rel="stylesheet" href="sections/shared/buttons.css">
   <link rel="stylesheet" href="sections/header/header.css">
   <link rel="stylesheet" href="sections/hero/hero.css">
-  <link rel="stylesheet" href="sections/control/control.css">
-  <link rel="stylesheet" href="sections/why/why.css">
   <link rel="stylesheet" href="sections/how/how.css">
+  <link rel="stylesheet" href="sections/why/why.css">
   <link rel="stylesheet" href="sections/integrations/integrations.css">
+  <link rel="stylesheet" href="sections/control/control.css">
   <link rel="stylesheet" href="sections/contact/contact.css">
 
   <!-- Structured Data -->
@@ -70,6 +69,8 @@
   }
   </script>
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
@@ -77,7 +78,7 @@
   <header class="header" data-aos="fade-down" data-aos-duration="700">
     <div class="container header__inner">
 
-      <a href="/" class="logo" aria-label="Payking">
+      <a href="#inicio" class="logo" aria-label="Payking">
         <img src="assets/img/logo-payking-blanco.svg" alt="Payking" height="34">
       </a>
 
@@ -91,7 +92,8 @@
     </div>
   </header>
 
-  <section class="hero" id="inicio">
+  <!-- HERO -->
+  <section class="hero" id="inicio" aria-label="Introducción">
     <div class="container hero__inner">
 
       <div class="hero__copy">
@@ -114,49 +116,25 @@
         </div>
       </div>
 
-      <div class="hero__media" aria-label="Imagen del producto" data-aos="fade-left" data-aos-delay="120">
+      <div class="hero__media" aria-label="Terminal desatendida" data-aos="fade-left" data-aos-delay="120">
+        <!-- Si tienes WebP, cambia por <picture> -->
         <img
           class="hero__img"
           src="assets/img/terminal.png"
           alt="Terminal desatendida integrada al sistema del estacionamiento"
+          loading="eager"
+          decoding="async"
         />
       </div>
 
     </div>
   </section>
 
-  <section class="how section" id="como">
+  <!-- HOW -->
+  <section class="how section" id="como" aria-label="Cómo funciona">
     <div class="container how__inner">
 
-      <!-- LEFT -->
-      <div class="how__visual" data-aos="fade-right">
-        <div class="how__illustrationWrap">
-          <img class="how__illustration" src="assets/img/how.png" alt="Personas pagando con tarjeta" />
-        </div>
-
-        <div class="how__results" aria-label="Resultados en producción" data-aos="fade-up" data-aos-delay="80">
-          <div class="how__result">
-            <span class="how__label">Terminales</span>
-            <strong class="how__value">200+</strong>
-          </div>
-
-          <div class="how__divider"></div>
-
-          <div class="how__result">
-            <span class="how__label">Procesados</span>
-            <strong class="how__value">$50M+</strong>
-          </div>
-
-          <div class="how__divider"></div>
-
-          <div class="how__result">
-            <span class="how__label">Transacciones</span>
-            <strong class="how__value">500K+</strong>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT -->
+      <!-- COPY FIRST (mobile lo fuerza por CSS, pero aquí ya va a la izquierda en desktop si quieres) -->
       <div class="how__copy">
         <h2 class="how__title" data-aos="fade-up">Cómo funciona</h2>
 
@@ -191,13 +169,47 @@
         </ol>
       </div>
 
+      <!-- VISUAL SECOND -->
+      <div class="how__visual" data-aos="fade-left">
+        <div class="how__illustrationWrap">
+          <img
+            class="how__illustration"
+            src="assets/img/how.png"
+            alt="Personas pagando con tarjeta"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div class="how__results" aria-label="Resultados en producción" data-aos="fade-up" data-aos-delay="80">
+          <div class="how__result">
+            <span class="how__label">Terminales</span>
+            <strong class="how__value">200+</strong>
+          </div>
+
+          <div class="how__divider" aria-hidden="true"></div>
+
+          <div class="how__result">
+            <span class="how__label">Procesados</span>
+            <strong class="how__value">$50M+</strong>
+          </div>
+
+          <div class="how__divider" aria-hidden="true"></div>
+
+          <div class="how__result">
+            <span class="how__label">Transacciones</span>
+            <strong class="how__value">500K+</strong>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section class="why section" id="por-que">
+  <!-- WHY -->
+  <section class="why section" id="por-que" aria-label="Por qué Payking">
     <div class="container why__inner">
 
-      <!-- LEFT -->
       <div class="why__content">
         <h2 class="why__title" data-aos="fade-up">Por qué Payking</h2>
 
@@ -228,15 +240,21 @@
         </div>
       </div>
 
-      <!-- RIGHT -->
       <div class="why__visual" data-aos="fade-left" data-aos-delay="120">
-        <img src="assets/img/why.png" alt="Impacto operativo en estacionamientos" class="why__img" />
+        <img
+          src="assets/img/why.png"
+          alt="Impacto operativo en estacionamientos"
+          class="why__img"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
 
     </div>
   </section>
 
-  <section class="integrations section" id="integraciones">
+  <!-- INTEGRATIONS -->
+  <section class="integrations section" id="integraciones" aria-label="Integraciones">
     <div class="container">
 
       <div class="integrations__header" data-aos="fade-up">
@@ -248,10 +266,10 @@
       </div>
 
       <div class="integrations__logos" data-aos="fade-up" data-aos-delay="80">
-        <img src="assets/img/meypar.svg" alt="Meypar">
-        <img src="assets/img/designa.webp" alt="DESIGNA">
-        <img src="assets/img/skidata.png" alt="Skidata">
-        <div class="integrations__custom"><span>Tu sistema</span></div>
+        <img src="assets/img/meypar.svg" alt="Meypar" loading="lazy" decoding="async">
+        <img src="assets/img/designa.webp" alt="DESIGNA" loading="lazy" decoding="async">
+        <img src="assets/img/skidata.png" alt="Skidata" loading="lazy" decoding="async">
+        <div class="integrations__custom" aria-label="Tu sistema"><span>Tu sistema</span></div>
       </div>
 
       <div class="integrations__features">
@@ -274,7 +292,8 @@
     </div>
   </section>
 
-  <section class="control section" id="control">
+  <!-- CONTROL -->
+  <section class="control section" id="control" aria-label="Control y reportes">
     <div class="container">
 
       <div class="control__top" data-aos="fade-up">
@@ -311,13 +330,12 @@
     </div>
   </section>
 
-  <section class="ctaFooter" id="contacto">
+  <!-- CONTACT + FOOTER -->
+  <section class="ctaFooter" id="contacto" aria-label="Solicitar demo">
     <div class="container ctaFooter__inner">
 
       <div class="ctaFooter__copy">
-        <h2 class="ctaFooter__title" data-aos="fade-up">
-          Habilita pagos con tarjeta en tu estacionamiento.
-        </h2>
+        <h2 class="ctaFooter__title" data-aos="fade-up">Habilita pagos con tarjeta en tu estacionamiento.</h2>
 
         <p class="ctaFooter__sub" data-aos="fade-up" data-aos-delay="80">
           Revisamos tu sistema actual y cómo integrar Payking a tu operación.
@@ -325,17 +343,17 @@
 
         <div class="ctaFooter__points">
           <div class="ctaPoint" data-aos="fade-up" data-aos-delay="0">
-            <span class="ctaPoint__dot"></span>
+            <span class="ctaPoint__dot" aria-hidden="true"></span>
             <span>Integración sin modificar tu sistema.</span>
           </div>
 
           <div class="ctaPoint" data-aos="fade-up" data-aos-delay="80">
-            <span class="ctaPoint__dot ctaPoint__dot--gold"></span>
+            <span class="ctaPoint__dot ctaPoint__dot--gold" aria-hidden="true"></span>
             <span>Implementación clara y rápida.</span>
           </div>
 
           <div class="ctaPoint" data-aos="fade-up" data-aos-delay="160">
-            <span class="ctaPoint__dot"></span>
+            <span class="ctaPoint__dot" aria-hidden="true"></span>
             <span>Operación multi-sitio y conciliación centralizada.</span>
           </div>
         </div>
@@ -343,11 +361,19 @@
 
       <div class="ctaFooter__card" data-aos="fade-left" data-aos-delay="120">
         <form class="ctaFooter__form" action="#" method="post">
-          <input type="text" placeholder="Nombre" required>
-          <input type="text" placeholder="Empresa" required>
-          <input type="email" placeholder="Correo" required>
-          <input type="tel" placeholder="Teléfono (opcional)">
-          <button class="btn btn-primary ctaFooter__submit">Solicitar demo</button>
+          <label class="sr-only" for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Nombre" required>
+
+          <label class="sr-only" for="company">Empresa</label>
+          <input id="company" name="company" type="text" placeholder="Empresa" required>
+
+          <label class="sr-only" for="email">Correo</label>
+          <input id="email" name="email" type="email" placeholder="Correo" required>
+
+          <label class="sr-only" for="phone">Teléfono</label>
+          <input id="phone" name="phone" type="tel" placeholder="Teléfono (opcional)">
+
+          <button class="btn btn-primary ctaFooter__submit" type="submit">Solicitar demo</button>
         </form>
       </div>
 

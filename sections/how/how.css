@@ -7,13 +7,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: start;
+  align-items: center;
 }
 
 /* LEFT VISUAL */
+.how__visual{
+  min-width: 0;
+}
 
 .how__illustrationWrap{
-  padding: 22px;
+  padding: 18px;
+  border: 1px solid rgba(11,18,32,.08);
+  border-radius: 26px;
+  background: rgba(255,255,255,.70);
+  box-shadow: 0 18px 50px rgba(11,18,32,.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +34,8 @@
 }
 
 /* RESULTS */
-
 .how__results{
-  margin-top: 22px;
+  margin-top: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,13 +43,14 @@
 
   border: 1px solid rgba(11,18,32,.08);
   border-radius: 22px;
-  background: rgba(255,255,255,.85);
-  padding: 18px;
+  background: rgba(255,255,255,.90);
+  padding: 16px 18px;
 }
 
 .how__result{
   display: grid;
   gap: 4px;
+  min-width: 0;
 }
 
 .how__label{
@@ -69,10 +76,13 @@
 }
 
 /* RIGHT COPY */
+.how__copy{
+  min-width: 0;
+}
 
 .how__title{
   margin: 0 0 10px;
-  font-size: 40px;
+  font-size: clamp(28px, 3.2vw, 40px);
   font-weight: 900;
   letter-spacing: -0.6px;
 }
@@ -87,7 +97,6 @@
 }
 
 /* Timeline */
-
 .how__timeline{
   list-style: none;
   margin: 0;
@@ -152,25 +161,60 @@
   max-width: 56ch;
 }
 
-/* Responsive */
-
+/* ✅ Responsive */
 @media (max-width: 980px){
+  .how{
+    padding: 56px 0;
+  }
+
   .how__inner{
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 22px;
+    align-items: start;
   }
 
-  .how__title{
-    font-size: 32px;
+  /* fuerza orden: copy arriba, visual abajo */
+  .how__copy{ order: 1; }
+  .how__visual{ order: 2; }
+
+  .how__sub{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
   }
 
+  /* resultados compactos: 3 columnas */
   .how__results{
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 14px;
   }
 
   .how__divider{
-    width: 100%;
-    height: 1px;
+    display: none;
+  }
+
+  .how__value{
+    font-size: 20px;
+  }
+
+  .how__label{
+    font-size: 10px;
+  }
+
+  .how__illustrationWrap{
+    padding: 14px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 420px){
+  .how__results{
+    grid-template-columns: 1fr;
+  }
+
+  .how__value{
+    font-size: 22px;
   }
 }

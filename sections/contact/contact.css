@@ -1,137 +1,163 @@
 .ctaFooter{
   background: var(--pk-blue);
   color: #ffffff;
-  padding-top: 120px;
+  padding: 84px 0 0; /* menos aire arriba */
 }
 
+/* Layout */
 .ctaFooter__inner{
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 70px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 64px;
   align-items: start;
 }
 
 /* LEFT */
-
 .ctaFooter__title{
   margin: 0 0 12px;
-  font-size: 42px;
+  font-size: clamp(28px, 3.6vw, 42px);
   font-weight: 900;
   letter-spacing: -0.8px;
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 .ctaFooter__sub{
-  margin: 0 0 26px;
+  margin: 0 0 22px;
   font-size: 16px;
-  line-height: 1.6;
-  opacity: .85;
+  line-height: 1.65;
+  opacity: .88;
   font-weight: 500;
+  max-width: 58ch;
 }
 
 .ctaFooter__points{
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .ctaPoint{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 15px;
-  font-weight: 500;
+  line-height: 1.55;
+  font-weight: 600;
+  opacity: .95;
 }
 
 .ctaPoint__dot{
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  background: #ffffff;
+  background: rgba(255,255,255,.95);
+  margin-top: 6px; /* alinea con texto */
+  flex: 0 0 auto;
 }
 
 .ctaPoint__dot--gold{
   background: var(--pk-gold);
 }
 
-/* RIGHT FORM */
-
+/* RIGHT FORM CARD */
 .ctaFooter__card{
-  background: #ffffff;
+  background: rgba(255,255,255,.98);
   padding: 28px;
   border-radius: 24px;
   color: #0b1220;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 26px 70px rgba(0,0,0,.22); /* flotante premium */
+  backdrop-filter: blur(6px);
 }
 
 .ctaFooter__form{
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .ctaFooter__form input{
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(11,18,32,.12);
+  border: 1px solid rgba(11,18,32,.14);
   font-size: 14px;
   font-family: inherit;
   outline: none;
+  background: #fff;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.ctaFooter__form input::placeholder{
+  color: rgba(11,18,32,.55);
 }
 
 .ctaFooter__form input:focus{
   border-color: var(--pk-blue);
-  box-shadow: 0 0 0 3px rgba(71,100,143,.15);
+  box-shadow: 0 0 0 3px rgba(71,100,143,.18);
 }
 
 .ctaFooter__submit{
-  margin-top: 4px;
+  margin-top: 6px;
   width: 100%;
 }
 
 /* Footer bottom */
-
 .ctaFooter__bottom{
-  margin-top: 90px;
-  padding: 24px 0;
-  border-top: 1px solid rgba(255,255,255,.15);
+  margin-top: 64px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,.16);
 }
 
 .ctaFooter__bottomInner{
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 14px;
+}
+
+.ctaFooter__copyright{
   font-size: 14px;
-  opacity: .8;
+  opacity: .82;
 }
 
 .ctaFooter__logo{
   height: 26px;
   width: auto;
-  opacity: 0.9;
+  opacity: 0.92;
+  transition: opacity .18s ease;
 }
 
 .ctaFooter__logo:hover{
   opacity: 1;
 }
 
-.ctaFooter__copyright{
-  font-size: 14px;
-  opacity: .8;
-}
-
 /* Responsive */
-
 @media (max-width: 980px){
+  .ctaFooter{
+    padding-top: 64px;
+  }
 
   .ctaFooter__inner{
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 28px;
   }
 
-  .ctaFooter__title{
-    font-size: 32px;
+  .ctaFooter__card{
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .ctaFooter__bottom{
+    margin-top: 46px;
   }
 
   .ctaFooter__bottomInner{
     flex-direction: column;
-    gap: 8px;
+    justify-content: center;
+    text-align: center;
   }
+}
 
+@media (max-width: 520px){
+  .ctaFooter__form input{
+    padding: 12px 12px;
+  }
 }
