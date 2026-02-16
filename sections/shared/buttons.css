@@ -1,0 +1,33 @@
+/* ===============================
+   Buttons
+================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--pk-blue);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #3c567a;
+}
+
+.btn-outline {
+  border: 1px solid var(--pk-blue);
+  color: var(--pk-blue);
+}
+
+.btn-outline:hover {
+  background: rgba(71, 100, 143, 0.08);
+}

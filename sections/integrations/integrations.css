@@ -1,0 +1,131 @@
+.integrations{
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+/* Header */
+
+.integrations__header{
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 60px;
+}
+
+.integrations__header h2{
+  margin: 0 0 14px;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -0.6px;
+}
+
+.integrations__header p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.integrations__header strong{
+  color: var(--pk-blue);
+  font-weight: 900;
+}
+
+/* Logos strip */
+
+.integrations__logos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.integrations__logos img{
+  max-height: 40px;        /* Altura uniforme */
+  max-width: 160px;        /* Evita logos gigantes */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+
+  /* Hace que todos se vean consistentes */
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all .25s ease;
+}
+
+.integrations__logos img:hover{
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.integrations__custom{
+  font-weight: 900;
+  color: rgba(11,18,32,.55);
+  font-size: 15px;
+}
+
+/* ===== Integrations Features ===== */
+
+.integrations__features{
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.feature{
+  position: relative;
+  padding-top: 20px;
+}
+
+.feature::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 4px;
+  background: var(--pk-blue);
+  border-radius: 4px;
+}
+
+.feature h3{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.feature p{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-weight: 500;
+  max-width: 32ch;
+}
+
+/* Responsive */
+
+@media (max-width: 980px){
+  .integrations__header h2{
+    font-size: 32px;
+  }
+
+  .integrations__features{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .feature p{
+    max-width: 100%;
+  }
+
+  .integrations__logos{
+    gap: 40px;
+  }
+}

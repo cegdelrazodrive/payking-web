@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payking</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="sections/shared/buttons.css">
+  <link rel="stylesheet" href="sections/header/header.css">
+  <link rel="stylesheet" href="sections/hero/hero.css">
+  <link rel="stylesheet" href="sections/control/control.css">
+  <link rel="stylesheet" href="sections/why/why.css">
+  <link rel="stylesheet" href="sections/how/how.css">
+  <link rel="stylesheet" href="sections/integrations/integrations.css">
+  <link rel="stylesheet" href="sections/contact/contact.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body>
+
+  <header class="header" data-aos="fade-down" data-aos-duration="700">
+    <div class="container header__inner">
+
+      <a href="/" class="logo" aria-label="Payking">
+        <img src="assets/img/logo-payking-blanco.svg" alt="Payking" height="34">
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <a href="#como">Cómo funciona</a>
+        <a href="#integraciones">Integraciones</a>
+        <a href="#reportes">Reportes</a>
+        <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+
+      <div class="hero__copy">
+        <p class="hero__kicker" data-aos="fade-up" data-aos-delay="0">
+          <span class="hero__dot" aria-hidden="true"></span>
+          Pagos con tarjeta para estacionamientos
+        </p>
+
+        <h1 class="hero__title" data-aos="fade-up" data-aos-delay="80">
+          Habilita el cobro con tarjeta en tu estacionamiento.
+        </h1>
+
+        <p class="hero__sub" data-aos="fade-up" data-aos-delay="140">
+          Integra terminales desatendidas con tu sistema actual y centraliza las transacciones en una sola plataforma.
+        </p>
+
+        <div class="hero__actions" data-aos="fade-up" data-aos-delay="200">
+          <a class="btn btn-primary hero__cta" href="#contacto">Solicitar demo</a>
+          <a class="btn btn-outline hero__secondary" href="#como">Cómo funciona</a>
+        </div>
+      </div>
+
+      <div class="hero__media" aria-label="Imagen del producto" data-aos="fade-left" data-aos-delay="120">
+        <img
+          class="hero__img"
+          src="assets/img/terminal.png"
+          alt="Terminal desatendida integrada al sistema del estacionamiento"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <section class="how section" id="como">
+    <div class="container how__inner">
+
+      <!-- LEFT -->
+      <div class="how__visual" data-aos="fade-right">
+        <div class="how__illustrationWrap">
+          <img class="how__illustration" src="assets/img/how.png" alt="Personas pagando con tarjeta" />
+        </div>
+
+        <div class="how__results" aria-label="Resultados en producción" data-aos="fade-up" data-aos-delay="80">
+          <div class="how__result">
+            <span class="how__label">Terminales</span>
+            <strong class="how__value">200+</strong>
+          </div>
+
+          <div class="how__divider"></div>
+
+          <div class="how__result">
+            <span class="how__label">Procesados</span>
+            <strong class="how__value">$50M+</strong>
+          </div>
+
+          <div class="how__divider"></div>
+
+          <div class="how__result">
+            <span class="how__label">Transacciones</span>
+            <strong class="how__value">500K+</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="how__copy">
+        <h2 class="how__title" data-aos="fade-up">Cómo funciona</h2>
+
+        <p class="how__sub" data-aos="fade-up" data-aos-delay="80">
+          Nos integramos a tu sistema de estacionamiento, instalamos la terminal y empiezas a cobrar con tarjeta.
+        </p>
+
+        <ol class="how__timeline">
+          <li class="how__item" data-aos="fade-up" data-aos-delay="0">
+            <div class="how__marker">1</div>
+            <div class="how__content">
+              <h3>Integración con tu sistema</h3>
+              <p>Sin desarrollo por tu lado. Conectamos Payking a tu operación actual.</p>
+            </div>
+          </li>
+
+          <li class="how__item" data-aos="fade-up" data-aos-delay="80">
+            <div class="how__marker">2</div>
+            <div class="how__content">
+              <h3>Instalación de terminal</h3>
+              <p>Terminal desatendida empotrada en tu cajero o módulo de pago.</p>
+            </div>
+          </li>
+
+          <li class="how__item" data-aos="fade-up" data-aos-delay="160">
+            <div class="how__marker how__marker--gold">3</div>
+            <div class="how__content">
+              <h3>Empiezas a cobrar</h3>
+              <p>Pagos con tarjeta + trazabilidad + conciliación en una sola plataforma.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="why section" id="por-que">
+    <div class="container why__inner">
+
+      <!-- LEFT -->
+      <div class="why__content">
+        <h2 class="why__title" data-aos="fade-up">Por qué Payking</h2>
+
+        <p class="why__sub" data-aos="fade-up" data-aos-delay="80">
+          No solo habilitamos pagos con tarjeta. Mejoramos la operación completa de tu estacionamiento.
+        </p>
+
+        <div class="why__list">
+          <div class="whyItem" data-aos="fade-up" data-aos-delay="0">
+            <h3>Menos efectivo</h3>
+            <p>Reduce riesgos operativos y dependencia de caja física.</p>
+          </div>
+
+          <div class="whyItem" data-aos="fade-up" data-aos-delay="80">
+            <h3>Más control</h3>
+            <p>Visibilidad clara de cada transacción por sitio y terminal.</p>
+          </div>
+
+          <div class="whyItem" data-aos="fade-up" data-aos-delay="160">
+            <h3>Implementación simple</h3>
+            <p>Integración directa sin modificar tu sistema actual.</p>
+          </div>
+
+          <div class="whyItem" data-aos="fade-up" data-aos-delay="240">
+            <h3>Escalable</h3>
+            <p>Opera múltiples estacionamientos desde una sola plataforma.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="why__visual" data-aos="fade-left" data-aos-delay="120">
+        <img src="assets/img/why.png" alt="Impacto operativo en estacionamientos" class="why__img" />
+      </div>
+
+    </div>
+  </section>
+
+  <section class="integrations section" id="integraciones">
+    <div class="container">
+
+      <div class="integrations__header" data-aos="fade-up">
+        <h2>Integrado con los principales sistemas</h2>
+        <p>
+          Si tu sistema no está aquí, lo integramos fácilmente
+          <strong>sin desarrollo por tu lado</strong>.
+        </p>
+      </div>
+
+      <div class="integrations__logos" data-aos="fade-up" data-aos-delay="80">
+        <img src="assets/img/meypar.svg" alt="Meypar">
+        <img src="assets/img/designa.webp" alt="DESIGNA">
+        <img src="assets/img/skidata.png" alt="Skidata">
+        <div class="integrations__custom"><span>Tu sistema</span></div>
+      </div>
+
+      <div class="integrations__features">
+        <div class="feature" data-aos="fade-up" data-aos-delay="0">
+          <h3>Implementación rápida</h3>
+          <p>Activamos tu operación sin interrumpir tu sistema actual.</p>
+        </div>
+
+        <div class="feature" data-aos="fade-up" data-aos-delay="80">
+          <h3>Operación continua</h3>
+          <p>Solución estable para entornos de alto volumen.</p>
+        </div>
+
+        <div class="feature" data-aos="fade-up" data-aos-delay="160">
+          <h3>Soporte técnico</h3>
+          <p>Acompañamiento durante integración y puesta en marcha.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="control section" id="control">
+    <div class="container">
+
+      <div class="control__top" data-aos="fade-up">
+        <h2>Control total de tus pagos con tarjeta.</h2>
+        <p>Centraliza transacciones y conciliación de uno o múltiples estacionamientos.</p>
+      </div>
+
+      <div class="control__cards">
+        <article class="control__card" data-aos="fade-up" data-aos-delay="0">
+          <div class="control__icon" aria-hidden="true">✓</div>
+          <div>
+            <h3>Transacciones en tiempo real</h3>
+            <span>Visibilidad sin depender del cajero.</span>
+          </div>
+        </article>
+
+        <article class="control__card" data-aos="fade-up" data-aos-delay="80">
+          <div class="control__icon control__icon--gold" aria-hidden="true">✓</div>
+          <div>
+            <h3>Conciliación clara</h3>
+            <span>Orden para cortes y reportes.</span>
+          </div>
+        </article>
+
+        <article class="control__card" data-aos="fade-up" data-aos-delay="160">
+          <div class="control__icon" aria-hidden="true">✓</div>
+          <div>
+            <h3>Operación multi-sitio</h3>
+            <span>Un panel para todas tus ubicaciones.</span>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ctaFooter" id="contacto">
+    <div class="container ctaFooter__inner">
+
+      <div class="ctaFooter__copy">
+        <h2 class="ctaFooter__title" data-aos="fade-up">
+          Habilita pagos con tarjeta en tu estacionamiento.
+        </h2>
+
+        <p class="ctaFooter__sub" data-aos="fade-up" data-aos-delay="80">
+          Revisamos tu sistema actual y cómo integrar Payking a tu operación.
+        </p>
+
+        <div class="ctaFooter__points">
+          <div class="ctaPoint" data-aos="fade-up" data-aos-delay="0">
+            <span class="ctaPoint__dot"></span>
+            <span>Integración sin modificar tu sistema.</span>
+          </div>
+
+          <div class="ctaPoint" data-aos="fade-up" data-aos-delay="80">
+            <span class="ctaPoint__dot ctaPoint__dot--gold"></span>
+            <span>Implementación clara y rápida.</span>
+          </div>
+
+          <div class="ctaPoint" data-aos="fade-up" data-aos-delay="160">
+            <span class="ctaPoint__dot"></span>
+            <span>Operación multi-sitio y conciliación centralizada.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ctaFooter__card" data-aos="fade-left" data-aos-delay="120">
+        <form class="ctaFooter__form" action="#" method="post">
+          <input type="text" placeholder="Nombre" required>
+          <input type="text" placeholder="Empresa" required>
+          <input type="email" placeholder="Correo" required>
+          <input type="tel" placeholder="Teléfono (opcional)">
+          <button class="btn btn-primary ctaFooter__submit">Solicitar demo</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="ctaFooter__bottom" data-aos="fade-up" data-aos-delay="80">
+      <div class="container ctaFooter__bottomInner">
+        <span class="ctaFooter__copyright">© 2026 Payking</span>
+        <img src="assets/img/logo-payking-blanco.svg" alt="Payking" class="ctaFooter__logo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 750,
+      easing: "ease-out-cubic",
+      offset: 80,
+    });
+  </script>
+
+</body>
+</html>
